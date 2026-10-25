@@ -18,7 +18,7 @@ for num, body in zip(blocks[0::2], blocks[1::2]):
             continue
         # an option line may contain a second merged option, e.g. "F. Technical G. Deterrent"
         m = re.match(r"^([A-H])\.\s+(.*)$", l)
-        if m and (opts or not stem or True) and (m.group(1) == chr(ord("A") + len(opts))):
+        if m and m.group(1) == chr(ord("A") + len(opts)):
             letter, txt = m.groups()
             merged = re.match(r"^(.*?)\s+([A-H])\.\s+(.*)$", txt)
             if merged and merged.group(2) == chr(ord(letter) + 1):

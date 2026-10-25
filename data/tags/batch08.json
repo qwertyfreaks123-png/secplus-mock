@@ -1,0 +1,280 @@
+{
+ "351": {
+  "objective": "4.1",
+  "difficulty": "medium",
+  "explanation": "Requiring LDAP authentication at the printer holds jobs until the attorney authenticates at the device, so no one else can pick up the printout. DLP on the workstation controls data leaving the endpoint but does not stop someone taking pages from the output tray."
+ },
+ "352": {
+  "objective": "2.3",
+  "difficulty": "medium",
+  "explanation": "Improperly used or managed certificates (expired, self-signed, wrong names, poor lifecycle handling) are a misconfiguration vulnerability; insecure key storage concerns where private keys are kept, not certificate use and management in general. The source key gives insecure key storage.",
+  "suggested_answer": [
+   "A"
+  ],
+  "flags": [
+   "Possible wrong answer: improper certificate use and management is best classed as misconfiguration; insecure key storage refers specifically to how private keys are protected.",
+   "Independent reviewer accepted the source answer; treat as ambiguous."
+  ]
+ },
+ "353": {
+  "objective": "1.3",
+  "difficulty": "easy",
+  "explanation": "A version control tool records every change to the code (such as IaC templates for virtual servers), showing who changed what and when. A change management ticketing system tracks requests and approvals, not the code modifications themselves."
+ },
+ "354": {
+  "objective": "4.6",
+  "difficulty": "medium",
+  "explanation": "A GPO applied to contract employees can set time-of-day log-in restrictions that enforce the Monday–Friday, 9-to-5 window. OAuth and SAML handle delegated authorization and federation, not time-based log-in limits."
+ },
+ "355": {
+  "objective": "4.1",
+  "difficulty": "medium",
+  "explanation": "Using regular expressions to strip special characters from form variables is input validation, which stops injection payloads from being processed. Static code analysis reviews source code for flaws but does not filter user input at runtime."
+ },
+ "356": {
+  "objective": "5.2",
+  "difficulty": "hard",
+  "explanation": "If the generator fails during failover, the key consideration is how long it would take to repair and restore power, which is the mean time to repair (MTTR). A BIA is the broader analysis of impacts rather than the specific metric for the failed component's recovery time."
+ },
+ "357": {
+  "objective": "2.5",
+  "difficulty": "medium",
+  "explanation": "Upgrading end-of-support operating systems removes unpatchable vulnerabilities, reducing the attack surface. High availability improves resilience and a honeynet aids detection, but neither removes exposed weaknesses."
+ },
+ "358": {
+  "objective": "4.3",
+  "difficulty": "medium",
+  "explanation": "After remediation, a rescan validates that the vulnerabilities were actually fixed. A report or audit may follow, but verification of remediation comes first."
+ },
+ "359": {
+  "objective": "1.2",
+  "difficulty": "medium",
+  "explanation": "Swipe cards and biometric scanners actively control who can enter on-premises areas by enforcing access at the door. A picture ID requires a guard to check it and a camera only records activity, so neither enforces access on its own.",
+  "suggested_answer": [
+   "A",
+   "D"
+  ],
+  "flags": [
+   "Incomplete answer key: stem asks for two answers but the source gives one; suggested pair A and D (swipe card and biometric scanner)."
+  ]
+ },
+ "360": {
+  "objective": "5.2",
+  "difficulty": "easy",
+  "explanation": "Risk identification establishes the scope and determines the potential risks involved with a project. Mitigation and treatment come later, after risks have been identified and analyzed."
+ },
+ "361": {
+  "objective": "4.3",
+  "difficulty": "medium",
+  "explanation": "Environmental variables (the organization's specific context, such as asset criticality and exposure) change the scope and impact a vulnerability would have if exploited, so they affect prioritization. They do not define cryptographic standards or update schedules."
+ },
+ "362": {
+  "objective": "3.3",
+  "difficulty": "easy",
+  "explanation": "Data sovereignty means data remains subject to the laws of its country of origin wherever it is stored. Geolocation identifies a physical location but carries no legal jurisdiction concept."
+ },
+ "363": {
+  "objective": "5.1",
+  "difficulty": "medium",
+  "explanation": "An acceptable use policy communicates users' responsibilities and expected behavior when operating the organization's systems and software. An SDLC policy governs how software is built, not general system use."
+ },
+ "364": {
+  "objective": "2.5",
+  "difficulty": "easy",
+  "explanation": "Input validation rejects or sanitizes malicious input before it is processed, directly preventing injection attacks. Static code analysis can find injection flaws but does not itself block attacks in production."
+ },
+ "365": {
+  "objective": "4.5",
+  "difficulty": "medium",
+  "explanation": "Firewall rules that block external access and permit only authorized internal sources enforce the required segmentation. A jump server provides controlled admin access but does not by itself restrict which systems can reach the servers."
+ },
+ "366": {
+  "objective": "4.1",
+  "difficulty": "easy",
+  "explanation": "MDM can enforce application allow lists on enrolled personal devices so only company-approved apps can be installed. Containerization separates work and personal data but does not control which apps are installed."
+ },
+ "367": {
+  "objective": "5.6",
+  "difficulty": "easy",
+  "explanation": "The infection came from an external hard drive, so training on removable media and cables addresses the root cause. Password management would only reduce the impact of stolen browser credentials, not prevent the infection."
+ },
+ "368": {
+  "objective": "2.2",
+  "difficulty": "easy",
+  "explanation": "A fraudulent text message is the threat vector of smishing (SMS phishing). Impersonation of the CEO is the technique used, but the vector delivering the attack is SMS."
+ },
+ "369": {
+  "objective": "1.3",
+  "difficulty": "medium",
+  "explanation": "Testing the policy in a non-production environment would have revealed that the deny-any rule blocked legitimate server traffic before it affected production. Submitting a change request adds approval and documentation but would not by itself catch the technical impact."
+ },
+ "370": {
+  "objective": "4.8",
+  "difficulty": "easy",
+  "explanation": "Moving the device into an air-gapped environment isolates it from the network, which quarantines it while preserving evidence. Remote wiping destroys evidence and is not quarantine."
+ },
+ "371": {
+  "objective": "3.4",
+  "difficulty": "easy",
+  "explanation": "A load balancer distributes incoming requests across all servers in the cluster so no single server is overloaded. A proxy server relays requests but does not balance load across servers."
+ },
+ "372": {
+  "objective": "3.2",
+  "difficulty": "medium",
+  "explanation": "MAC filtering on the switch port allows only the approved phone's MAC address, so an unauthorized laptop cannot connect and scan. Segmentation would limit what a connected device can reach but would not stop it from connecting."
+ },
+ "373": {
+  "objective": "5.6",
+  "difficulty": "medium",
+  "explanation": "The exposure happened because a remote worker left a laptop unlocked at home, which is addressed by the hybrid/remote work environment policy and training. Operations security concerns protecting information from being gathered more broadly and is less specific to this home-working scenario. The source key gives operations security.",
+  "suggested_answer": [
+   "A"
+  ],
+  "flags": [
+   "Possible wrong answer: the scenario centers on securing a laptop while working from home, which SY0-701 covers under hybrid/remote work environments rather than operations security.",
+   "Independent reviewer accepted the source answer; treat as ambiguous."
+  ]
+ },
+ "374": {
+  "objective": "5.5",
+  "difficulty": "easy",
+  "explanation": "Rules of engagement define the scope, methods, and procedures a penetration tester must follow during a test. The other options are not standard penetration testing terms."
+ },
+ "375": {
+  "objective": "4.6",
+  "difficulty": "medium",
+  "explanation": "A privileged access management solution vaults, rotates, and grants just-in-time access to admin credentials, limiting the reuse of hashes in pass-the-hash attacks. Password expiration and compliance audits do not stop a captured hash from being reused."
+ },
+ "376": {
+  "objective": "4.8",
+  "difficulty": "easy",
+  "explanation": "Stakeholders meeting to discuss roles and responsibilities for a hypothetical breach is a tabletop exercise. Incident response is the actual handling of a real incident."
+ },
+ "377": {
+  "objective": "4.7",
+  "difficulty": "easy",
+  "explanation": "Automation can check server security settings against a baseline every day consistently and without human effort. Manual audits and checklists are slower and prone to inconsistency."
+ },
+ "378": {
+  "objective": "5.6",
+  "difficulty": "medium",
+  "explanation": "The incident started with an employee clicking a malicious email link, so user awareness training addresses the root cause. DLP could limit the exfiltration but would not prevent the initial compromise."
+ },
+ "379": {
+  "objective": "3.1",
+  "difficulty": "easy",
+  "explanation": "A serverless framework hosts application code in the cloud with pay-per-use billing and no servers to manage, keeping costs low. A Type 1 hypervisor requires owning and managing physical hardware."
+ },
+ "380": {
+  "objective": "1.4",
+  "difficulty": "easy",
+  "explanation": "Code signing applies a digital signature that proves the application has not been altered and comes from the stated publisher. Static analysis finds code flaws but does not provide integrity assurance to users."
+ },
+ "381": {
+  "objective": "5.4",
+  "difficulty": "easy",
+  "explanation": "Sanctions imposed by government regulators are a direct consequence of non-compliance. External compliance reporting and attestation are compliance activities, not consequences."
+ },
+ "382": {
+  "objective": "2.3",
+  "difficulty": "medium",
+  "explanation": "Memory injection copies malicious code into the memory space of an already running process so it executes under that process. Receiving unexpected amounts of data describes a buffer overflow, and two processes sharing a variable describes a race condition."
+ },
+ "383": {
+  "objective": "3.3",
+  "difficulty": "medium",
+  "explanation": "Patient health data is sensitive data that requires strong protection under regulations such as HIPAA. Critical describes data essential to operations rather than data whose disclosure causes harm."
+ },
+ "384": {
+  "objective": "4.3",
+  "difficulty": "medium",
+  "explanation": "CVSS provides a standardized severity score used to prioritize vulnerabilities. CVE is only an identifier for a vulnerability and conveys no priority."
+ },
+ "385": {
+  "objective": "4.3",
+  "difficulty": "medium",
+  "explanation": "A bug bounty program uses many outside researchers to find as many issues as possible, fitting a goal of finding any possible issues regardless of cost. A vulnerability scan only finds known, signature-based issues."
+ },
+ "386": {
+  "objective": "1.2",
+  "difficulty": "easy",
+  "explanation": "Authorization grants access to resources after a user has been authenticated by logging in. Authentication is the log-in step itself that verifies identity."
+ },
+ "387": {
+  "objective": "4.1",
+  "difficulty": "easy",
+  "explanation": "Secure baselines are first established, then deployed to systems, then maintained as threats and systems change. A baseline cannot be deployed or maintained before it is established."
+ },
+ "388": {
+  "objective": "3.2",
+  "difficulty": "easy",
+  "explanation": "A VPN encrypts traffic between remote users and the enterprise, protecting the confidentiality of remote connections. Firewalls and IDSs control or monitor traffic but do not encrypt it."
+ },
+ "389": {
+  "objective": "3.1",
+  "difficulty": "easy",
+  "explanation": "An air-gapped architecture physically isolates critical systems from all networks so remote users cannot reach them. Segmentation separates network zones logically but they remain connected."
+ },
+ "390": {
+  "objective": "2.1",
+  "difficulty": "easy",
+  "explanation": "Website defacement is low-sophistication, attention-seeking activity typical of unskilled attackers. Organized crime is financially motivated and nation-states pursue strategic goals, so defacing a music group's site does not fit them."
+ },
+ "391": {
+  "objective": "4.6",
+  "difficulty": "medium",
+  "explanation": "Following a password audit, the policy should strengthen passwords through minimum length and complexity requirements. Least privilege concerns authorization, and security keys or biometrics are other authentication factors rather than password policy settings.",
+  "suggested_answer": [
+   "A",
+   "B"
+  ],
+  "flags": [
+   "Incomplete answer key: stem asks for two answers but the source gives one; suggested pair A and B (length and complexity)."
+  ]
+ },
+ "392": {
+  "objective": "4.5",
+  "difficulty": "medium",
+  "explanation": "EDR collects and rapidly analyzes telemetry from potentially compromised endpoints and forwards it for investigation and response. A SIEM aggregates and correlates logs centrally but is not deployed onto hosts to gather and analyze their data."
+ },
+ "393": {
+  "objective": "5.3",
+  "difficulty": "easy",
+  "explanation": "The CFO approving a large purchase from a personal friend's company is a conflict of interest. Due diligence is the assessment process that should help identify such issues, not the situation itself."
+ },
+ "394": {
+  "objective": "5.2",
+  "difficulty": "easy",
+  "explanation": "The recovery time objective defines how long a system can be down after an incident before the impact becomes unacceptable. The state systems are restored to relates to the RPO and restore points, not the RTO."
+ },
+ "395": {
+  "objective": "4.7",
+  "difficulty": "medium",
+  "explanation": "A log-in script that checks OS version, patch levels, and installed applications automatically verifies systems against the secure baseline, which is baseline enforcement. Guardrails are preventive limits on actions, not checks of system configuration."
+ },
+ "396": {
+  "objective": "5.1",
+  "difficulty": "medium",
+  "explanation": "A standard operating procedure gives step-by-step instructions so patches are applied consistently in line with the secure baseline. An information security policy states high-level requirements but not the operational steps."
+ },
+ "397": {
+  "objective": "4.6",
+  "difficulty": "easy",
+  "explanation": "A password (something you know), authentication token (something you have), and thumbprint (something you are) cover all three factors. The other options mix identifiers, certificates, and locations that do not match the required factor types."
+ },
+ "398": {
+  "objective": "5.6",
+  "difficulty": "medium",
+  "explanation": "Training on situational awareness teaches employees to notice missing badges and people following them through controlled entrances. Social engineering is broader, and tailgating is one example of it, but awareness of surroundings is what the training emphasizes here."
+ },
+ "399": {
+  "objective": "3.3",
+  "difficulty": "easy",
+  "explanation": "Tokenization replaces sensitive data with surrogate token values that map back to the original in a secure vault. Hashing is a one-way transformation with no mapping back to the original value."
+ },
+ "400": {
+  "objective": "2.2",
+  "difficulty": "easy",
+  "explanation": "Registering a near-identical domain (wwww instead of www) to catch mistyped addresses is typosquatting. Brand impersonation uses a company's branding to deceive but does not depend on a mistyped URL."
+ }
+}

@@ -1,0 +1,2543 @@
+{
+ "1": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "2": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "3": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "4": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "5": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "6": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "7": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "8": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "9": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "10": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "11": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": false,
+  "confidence": "medium",
+  "reason": "An internal PCI DSS assessment is not performed by the card brands/acquirer, so its direct outcome is audit findings; fines come from external (QSA/acquirer) non-compliance."
+ },
+ "12": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "13": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "14": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "15": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "16": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "17": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "18": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "19": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "20": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "21": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "22": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "23": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "24": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "25": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "26": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "27": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "28": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "29": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "30": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "31": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "32": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "33": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "34": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "35": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "36": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "37": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "38": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "39": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "40": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "41": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "42": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "43": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "44": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "45": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "46": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "47": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "48": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "49": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "50": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "51": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "52": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "53": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "54": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "55": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "56": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "57": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "58": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "59": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "60": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "61": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "62": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "63": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "64": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "65": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "66": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "67": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "68": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "69": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "70": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "71": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "72": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "73": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "74": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "75": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "76": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "77": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "78": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "79": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "80": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "81": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "82": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "83": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "84": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "85": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "86": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "87": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "88": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "89": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "90": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "91": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "92": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "93": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "94": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "95": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "96": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "97": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "98": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "99": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "100": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "101": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "102": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "103": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "104": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "105": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "106": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "107": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "108": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "109": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "110": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "111": {
+  "reviewer_answer": [
+   "D",
+   "E"
+  ],
+  "agrees": true
+ },
+ "112": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "113": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "114": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "115": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "116": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "117": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "118": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "119": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "120": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "121": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "122": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "123": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "124": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "125": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "126": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "127": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "128": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "129": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "130": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "131": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "132": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "133": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "134": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "135": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "136": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "137": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "138": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "139": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "140": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "141": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "142": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "143": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "144": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "145": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "146": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "147": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "148": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "149": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "150": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "151": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "152": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "153": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "154": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "155": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": false,
+  "confidence": "medium",
+  "reason": "Sending logs to an off-site location for possible future reference is archiving; log aggregation is centralizing logs for correlation/analysis."
+ },
+ "156": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "157": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "158": {
+  "reviewer_answer": [
+   "B",
+   "F"
+  ],
+  "agrees": true
+ },
+ "159": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "160": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "161": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "162": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "163": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "164": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "165": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "166": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "167": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "168": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "169": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "170": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "171": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "172": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "173": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "174": {
+  "reviewer_answer": [
+   "E"
+  ],
+  "agrees": true
+ },
+ "175": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "176": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Malware delivered via shared files with no performance degradation and no failed logins points to a remote access Trojan; cryptojacking would noticeably degrade performance."
+ },
+ "177": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "178": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "179": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "180": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Only users who clocked in from inside the building (using internal DNS) were compromised; remote users of the same internet site were not, which rules out a site compromise (B) and fits internal DNS poisoning. ARP poisoning is unlikely across multiple routed segments/floors."
+ },
+ "181": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "182": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "183": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "184": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "185": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "186": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "187": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "188": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "189": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "190": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "191": {
+  "reviewer_answer": [
+   "E"
+  ],
+  "agrees": true
+ },
+ "192": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "193": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "194": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "195": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "196": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "197": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "198": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "199": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "200": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "201": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "202": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "203": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "204": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "205": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "206": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "207": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "208": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "209": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "210": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "211": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "212": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "213": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "214": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "215": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": false,
+  "confidence": "medium",
+  "reason": "For ransomware recovery the key is offline/immutable backups; daily full backups on offline media survive the attack and restore quickly, whereas a NAS drive is online and reachable by ransomware."
+ },
+ "216": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "217": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "218": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "219": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "220": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "221": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "222": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "223": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "224": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "225": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "226": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "227": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "228": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "229": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "230": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "231": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "232": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "233": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "234": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "235": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "236": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "237": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "238": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "239": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "240": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "241": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "242": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "243": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "244": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "245": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "246": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "247": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "248": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "249": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "250": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "251": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "252": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "253": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "254": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "255": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "256": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "257": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "258": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "259": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "260": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "261": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "262": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "263": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "264": {
+  "reviewer_answer": [
+   "E",
+   "F"
+  ],
+  "agrees": true
+ },
+ "265": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "266": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "267": {
+  "reviewer_answer": [
+   "A",
+   "F"
+  ],
+  "agrees": true
+ },
+ "268": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "269": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "270": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "271": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "272": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "273": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "274": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "275": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "276": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "277": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "278": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "279": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "280": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "281": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "282": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "283": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "284": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "285": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "286": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "287": {
+  "reviewer_answer": [
+   "E"
+  ],
+  "agrees": true
+ },
+ "288": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "289": {
+  "reviewer_answer": [
+   "A",
+   "D"
+  ],
+  "agrees": true
+ },
+ "290": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "291": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "292": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "293": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "294": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "295": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "296": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "297": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "298": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "299": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "300": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "301": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "302": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "303": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "304": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "305": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "306": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "307": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "308": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "309": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "310": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": false,
+  "confidence": "medium",
+  "reason": "On-premises gives the organization full control over the physical and logical security of the data and is the conventional 'most secure' architecture answer; cloud-based is not inherently the most secure."
+ },
+ "311": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "312": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "313": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "314": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "315": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "316": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "317": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "318": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "319": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "320": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "321": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "322": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "323": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "324": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "325": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "326": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "327": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "328": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "329": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "330": {
+  "reviewer_answer": [
+   "A",
+   "D"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Incomplete key: select-two question; ease of recovery and responsiveness are the HA design considerations."
+ },
+ "331": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "332": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "333": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "334": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "335": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "336": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "337": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": false,
+  "confidence": "medium",
+  "reason": "Ambiguous: COPE fits company-owned and hardened, but 'reduced security risk' is best met by COBO (business-only use), which is more restrictive than COPE."
+ },
+ "338": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "339": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "340": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "341": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "342": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "343": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "344": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": false,
+  "confidence": "medium",
+  "reason": "Ambiguous/near-duplicate of 345: corrective controls fix errors after they occur (B); preventing unauthorized changes (D) describes a preventive control, not a corrective one."
+ },
+ "345": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "346": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "347": {
+  "reviewer_answer": [
+   "A",
+   "D"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Incomplete key: select-two question; full disk encryption and endpoint protection harden end-user devices."
+ },
+ "348": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "349": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "350": {
+  "reviewer_answer": [
+   "C",
+   "D"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Incomplete key: select-two question; SSH tunneling (encrypt the legacy protocol) and segmentation are the compensating controls."
+ },
+ "351": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "352": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "353": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "354": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "355": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "356": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "357": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "358": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "359": {
+  "reviewer_answer": [
+   "A",
+   "D"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Incomplete key: select-two question; swipe card and biometric scanner control on-premises physical access."
+ },
+ "360": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "361": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "362": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "363": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "364": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "365": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "366": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "367": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "368": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "369": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "370": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "371": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "372": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "373": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "374": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "375": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "376": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "377": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "378": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "379": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "380": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "381": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "382": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "383": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "384": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "385": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "386": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "387": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "388": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "389": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "390": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "391": {
+  "reviewer_answer": [
+   "A",
+   "B"
+  ],
+  "agrees": false,
+  "confidence": "high",
+  "reason": "Incomplete key: select-two question following a password audit; length and complexity belong in the password policy."
+ },
+ "392": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "393": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "394": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "395": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "396": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "397": {
+  "reviewer_answer": [
+   "C"
+  ],
+  "agrees": true
+ },
+ "398": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "399": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "400": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "401": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "402": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "403": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "404": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "405": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "406": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "407": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "408": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "409": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "410": {
+  "reviewer_answer": [
+   "B"
+  ],
+  "agrees": true
+ },
+ "411": {
+  "reviewer_answer": [
+   "A",
+   "C"
+  ],
+  "agrees": true
+ },
+ "412": {
+  "reviewer_answer": [
+   "A"
+  ],
+  "agrees": true
+ },
+ "413": {
+  "reviewer_answer": [
+   "A",
+   "B"
+  ],
+  "agrees": true
+ },
+ "414": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "415": {
+  "reviewer_answer": [
+   "C",
+   "D"
+  ],
+  "agrees": true
+ },
+ "416": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ },
+ "417": {
+  "reviewer_answer": [
+   "D"
+  ],
+  "agrees": true
+ }
+}
