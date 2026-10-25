@@ -1,52 +1,258 @@
 {
-"51": {"objective": "4.1", "difficulty": "medium", "explanation": "Requiring peer review and approval means no single developer can introduce code without another person examining it, which deters and catches malicious insider changes. Code scanning finds known vulnerability patterns but can miss deliberately hidden logic."},
-"52": {"objective": "4.7", "difficulty": "medium", "explanation": "Scripting repetitive account creation is a classic orchestration/automation use case that saves time and removes human error. A baseline defines a standard configuration but does not perform account creation."},
-"53": {"objective": "2.5", "difficulty": "medium", "explanation": "Access control lists on the file server can be changed immediately to restrict who can reach the confidential data. DLP detects or blocks data leaving the organization but does not set file permissions."},
-"54": {"objective": "2.1", "difficulty": "easy", "explanation": "Ransomware-as-a-service is a financially motivated criminal business model associated with organized crime. Nation-state actors are typically motivated by espionage or geopolitics rather than ransom revenue."},
-"55": {"objective": "2.3", "difficulty": "medium", "explanation": "End-of-life operating systems no longer receive vendor security patches, leaving new vulnerabilities unfixed. Replacement cost is a business consideration rather than the security implication."},
-"56": {"objective": "3.2", "difficulty": "easy", "explanation": "IPSec provides encrypted, authenticated tunnels suitable for secure remote access to a client network. EAP is an authentication framework and does not by itself create a secure remote connection."},
-"57": {"objective": "1.3", "difficulty": "easy", "explanation": "Scheduled downtime (a maintenance window) gives administrators a set period to make changes while minimizing business impact. A backout plan describes how to reverse a change, not when to make it."},
-"58": {"objective": "4.4", "difficulty": "medium", "explanation": "Endpoint management software on every workstation and server can track configuration changes and installed software on each host. Monitoring egress traffic shows network activity but not unauthorized local changes."},
-"59": {"objective": "5.6", "difficulty": "medium", "explanation": "A caller impersonating the CFO's request to obtain card details is a social engineering (vishing/pretexting) attempt. Whaling targets executives themselves, whereas here an ordinary user was targeted by phone."},
-"60": {"objective": "4.8", "difficulty": "easy", "explanation": "A tabletop exercise walks the team through incident scenarios to find gaps and improve the response process. Failover and replication are resilience techniques, not incident response exercises."},
-"61": {"objective": "1.4", "difficulty": "easy", "explanation": "OCSP lets a client check a certificate's revocation status in real time when it is presented. A CSR is a request to obtain a certificate, not a means of validating one."},
-"62": {"objective": "2.5", "difficulty": "medium", "explanation": "Segmenting legacy IoT devices onto an isolated network quickly limits who can reach the vulnerable service. Patching is often unavailable or slow for legacy IoT, and replacement takes time."},
-"63": {"objective": "3.3", "difficulty": "easy", "explanation": "Encrypting data at rest (e.g., full-disk encryption) keeps data on a stolen laptop unreadable. Masking only obscures displayed values and does not protect the stored data."},
-"64": {"objective": "3.1", "difficulty": "easy", "explanation": "Containers are lightweight and quickly built, deployed and destroyed, which suits constantly changing environments. RTOS, embedded systems and SCADA are typically static and difficult to change."},
-"65": {"objective": "3.2", "difficulty": "medium", "explanation": "Requiring a VPN and placing the jump server inside the firewall removes the remote desktop from public exposure while preserving controlled access. Changing to a non-standard port is security through obscurity and the service remains exposed."},
-"66": {"objective": "2.3", "difficulty": "easy", "explanation": "SQL injection targets the database layer, exploiting weaknesses such as unsanitized queries and poorly configured database permissions. Buffer overflow and memory injection target application memory, not the database."},
-"67": {"objective": "2.5", "difficulty": "easy", "explanation": "Segmentation places customer data on a separate network segment that corporate users cannot reach. Isolation implies completely cutting a system off, which is more than storing data on a separate, restricted part of the network."},
-"68": {"objective": "4.3", "difficulty": "easy", "explanation": "CVSS assigns a numeric 0-10 score to quantify a vulnerability's severity. CVE is an identifier for a vulnerability and does not rate its criticality."},
-"69": {"objective": "1.2", "difficulty": "easy", "explanation": "HR files contain sensitive personal data, so least privilege mainly protects confidentiality by limiting who can read them. Integrity concerns unauthorized modification, which is secondary here."},
-"70": {"objective": "3.2", "difficulty": "medium", "explanation": "Safety controls such as emergency exit doors should fail open so people are not trapped when a system fails, protecting human life. Logical security controls failing closed protects data but does not address life safety."},
-"71": {"objective": "2.2", "difficulty": "easy", "explanation": "Air-gapped networks have no network connection, so removable media such as USB drives are the most common path for data to leave. Bluetooth is typically disabled or absent in air-gapped environments."},
-"72": {"objective": "2.5", "difficulty": "easy", "explanation": "An application allow list blocks any program that is not explicitly approved, stopping inadvertent malware installation. Least privilege limits damage but users may still run unapproved executables in their own context."},
-"73": {"objective": "3.2", "difficulty": "hard", "explanation": "SASE delivers cloud-based secure access and web security close to remote users, offloading internet traffic from the VPN and circuit while still monitoring it and providing encrypted access to the data center. A load-balanced VPN adds capacity but does not reduce traffic on the circuit."},
-"74": {"objective": "2.4", "difficulty": "hard", "explanation": "Heavy inbound traffic with few queries sent by the server indicates responses from reflectors (e.g., amplified DNS replies) flooding its interface, a reflected denial of service. On-path attacks intercept traffic rather than flooding a target."},
-"75": {"objective": "4.6", "difficulty": "medium", "explanation": "RBAC grants access based on job roles and simplifies administration by assigning permissions to roles rather than individuals. ACLs are set per resource and user, which is less simplified to manage."},
-"76": {"objective": "2.3", "difficulty": "easy", "explanation": "The BIOS is firmware, so a BIOS update addresses a firmware vulnerability. Operating system patches apply to the OS loaded after the firmware initializes the hardware."},
-"77": {"objective": "4.9", "difficulty": "easy", "explanation": "File metadata records attributes such as the creation date and author. A SHA-256 hash only identifies the file's contents and reveals nothing about who created it or when."},
-"78": {"objective": "4.1", "difficulty": "medium", "explanation": "Web-based administration is an unnecessary, commonly targeted management interface that should be disabled when hardening routers. Routing protocols and VLANs are required for the network to function, and console access is local and needed for management."},
-"79": {"objective": "3.1", "difficulty": "easy", "explanation": "Infrastructure as code defines cloud resources in templates so they can be deployed easily and consistently. SDN abstracts network control but does not by itself automate deployment of all cloud resources."},
-"80": {"objective": "2.4", "difficulty": "medium", "explanation": "Repeated failed login attempts against an account captured in a server's security log indicate a brute-force attack. A forgotten password produces only a few failures rather than a rapid series of attempts."},
-"81": {"objective": "2.1", "difficulty": "medium", "explanation": "Organized crime groups are well funded, capable and financially motivated, so they can be hired by a foreign government to attack critical systems. Hacktivists act for ideological causes rather than as paid contractors."},
-"82": {"objective": "1.4", "difficulty": "easy", "explanation": "A salt is random data added to input before hashing so identical inputs produce different hashes and precomputed tables fail. Key stretching repeatedly applies the hash rather than adding data beforehand."},
-"83": {"objective": "2.2", "difficulty": "medium", "explanation": "A deceptive email linking to a fake site to harvest login credentials is phishing. Brand impersonation describes one technique within the email, but the overall attack is phishing."},
-"84": {"objective": "4.5", "difficulty": "medium", "explanation": "The rule set must first permit port 53 from 10.50.10.25 to any destination, then deny port 53 from all other sources, since ACLs are processed top-down. The other options either permit everyone first or reverse source and destination."},
-"85": {"objective": "4.6", "difficulty": "easy", "explanation": "SSO (e.g., via federation with the domain) lets employees use their existing domain credentials for SaaS applications, reducing credentials to maintain. MFA adds authentication factors but does not reduce the number of credentials."},
-"86": {"objective": "3.2", "difficulty": "easy", "explanation": "A jump server is a hardened intermediary host that administrators connect to before reaching a protected segment. RADIUS provides centralized authentication but does not provide a path into the segment."},
-"87": {"objective": "4.5", "difficulty": "medium", "explanation": "A WAF inspects HTTP traffic to a web application and can block malicious payloads such as buffer overflow attempts against the website. An NGFW works at the network level and is less focused on web application attacks."},
-"88": {"objective": "4.6", "difficulty": "medium", "explanation": "Logins from unknown IPs indicate stolen credentials, and MFA prevents a password alone from granting access. Password complexity does not help once a password has already been compromised."},
-"89": {"objective": "5.5", "difficulty": "easy", "explanation": "Giving the tester some basic information about the target is a partially known environment (gray box) test. A known environment test provides full details such as documentation and source code."},
-"90": {"objective": "3.3", "difficulty": "easy", "explanation": "A site-to-site VPN encrypts traffic moving between locations, protecting data in transit. Data in use refers to data being processed in memory, which a VPN does not protect."},
-"91": {"objective": "2.1", "difficulty": "easy", "explanation": "A department deploying its own software without IT approval is shadow IT. An insider threat implies malicious or harmful intent, which is not described."},
-"92": {"objective": "1.4", "difficulty": "easy", "explanation": "A valid code signature proves the software was published by the vendor and has not been modified. A self-generated hash shows integrity only against a known value, not who produced the software."},
-"93": {"objective": "2.2", "difficulty": "medium", "explanation": "NAC checks devices before granting them access to the network, primarily protecting the wired network attack surface such as open switch ports. Bluetooth and NFC are short-range wireless surfaces that NAC does not typically address."},
-"94": {"objective": "1.1", "difficulty": "medium", "explanation": "Disabling services and adding a firewall offsets risks of a legacy system that cannot be fixed directly, which are compensating controls. Segmentation would mean placing the system on a separate network, which is not described."},
-"95": {"objective": "5.3", "difficulty": "medium", "explanation": "A thorough supply chain analysis verifies the sources and vendors of hardware, reducing the risk of counterfeit components. A right-to-audit clause permits audits but does not by itself address counterfeit procurement."},
-"96": {"objective": "5.3", "difficulty": "easy", "explanation": "Rules of engagement define the scope, timing, methods and limits of a penetration test with a third party. A right-to-audit clause grants audit rights rather than defining test terms."},
-"97": {"objective": "5.5", "difficulty": "easy", "explanation": "Port and service scans interact directly with the target, which is active reconnaissance. Passive reconnaissance gathers information without touching the target, such as OSINT."},
-"98": {"objective": "2.3", "difficulty": "easy", "explanation": "Side loading installs apps from outside the official store or approved repository. Jailbreaking modifies the OS to remove restrictions, which may enable side loading but is a different action."},
-"99": {"objective": "2.4", "difficulty": "medium", "explanation": "A changed hash on a core system binary with no recent patches indicates the file was replaced or modified, consistent with a rootkit. Changing file permissions does not alter a file's contents or hash."},
-"100": {"objective": "3.2", "difficulty": "medium", "explanation": "A jump server adds a controlled, hardened layer that users must pass through before reaching internal resources. A proxy server mainly mediates outbound web traffic rather than controlling access to internal systems."}
+ "51": {
+  "objective": "4.1",
+  "difficulty": "medium",
+  "explanation": "Requiring peer review and approval means no single developer can introduce code without another person examining it, which deters and catches malicious insider changes. Code scanning finds known vulnerability patterns but can miss deliberately hidden logic."
+ },
+ "52": {
+  "objective": "4.7",
+  "difficulty": "medium",
+  "explanation": "Scripting repetitive account creation is a classic orchestration/automation use case that saves time and removes human error. A baseline defines a standard configuration but does not perform account creation."
+ },
+ "53": {
+  "objective": "2.5",
+  "difficulty": "medium",
+  "explanation": "Access control lists on the file server can be changed immediately to restrict who can reach the confidential data. DLP detects or blocks data leaving the organization but does not set file permissions."
+ },
+ "54": {
+  "objective": "2.1",
+  "difficulty": "easy",
+  "explanation": "Ransomware-as-a-service is a financially motivated criminal business model associated with organized crime. Nation-state actors are typically motivated by espionage or geopolitics rather than ransom revenue."
+ },
+ "55": {
+  "objective": "2.3",
+  "difficulty": "medium",
+  "explanation": "End-of-life operating systems no longer receive vendor security patches, leaving new vulnerabilities unfixed. Replacement cost is a business consideration rather than the security implication."
+ },
+ "56": {
+  "objective": "3.2",
+  "difficulty": "easy",
+  "explanation": "IPSec provides encrypted, authenticated tunnels suitable for secure remote access to a client network. EAP is an authentication framework and does not by itself create a secure remote connection."
+ },
+ "57": {
+  "objective": "1.3",
+  "difficulty": "easy",
+  "explanation": "Scheduled downtime (a maintenance window) gives administrators a set period to make changes while minimizing business impact. A backout plan describes how to reverse a change, not when to make it."
+ },
+ "58": {
+  "objective": "4.4",
+  "difficulty": "medium",
+  "explanation": "Endpoint management software on every workstation and server can track configuration changes and installed software on each host. Monitoring egress traffic shows network activity but not unauthorized local changes."
+ },
+ "59": {
+  "objective": "5.6",
+  "difficulty": "medium",
+  "explanation": "A caller impersonating the CFO's request to obtain card details is a social engineering (vishing/pretexting) attempt. Whaling targets executives themselves, whereas here an ordinary user was targeted by phone."
+ },
+ "60": {
+  "objective": "4.8",
+  "difficulty": "easy",
+  "explanation": "A tabletop exercise walks the team through incident scenarios to find gaps and improve the response process. Failover and replication are resilience techniques, not incident response exercises."
+ },
+ "61": {
+  "objective": "1.4",
+  "difficulty": "easy",
+  "explanation": "OCSP lets a client check a certificate's revocation status in real time when it is presented. A CSR is a request to obtain a certificate, not a means of validating one."
+ },
+ "62": {
+  "objective": "2.5",
+  "difficulty": "medium",
+  "explanation": "Segmenting legacy IoT devices onto an isolated network quickly limits who can reach the vulnerable service. Patching is often unavailable or slow for legacy IoT, and replacement takes time."
+ },
+ "63": {
+  "objective": "3.3",
+  "difficulty": "easy",
+  "explanation": "Encrypting data at rest (e.g., full-disk encryption) keeps data on a stolen laptop unreadable. Masking only obscures displayed values and does not protect the stored data."
+ },
+ "64": {
+  "objective": "3.1",
+  "difficulty": "easy",
+  "explanation": "Containers are lightweight and quickly built, deployed and destroyed, which suits constantly changing environments. RTOS, embedded systems and SCADA are typically static and difficult to change."
+ },
+ "65": {
+  "objective": "3.2",
+  "difficulty": "medium",
+  "explanation": "Requiring a VPN and placing the jump server inside the firewall removes the remote desktop from public exposure while preserving controlled access. Changing to a non-standard port is security through obscurity and the service remains exposed."
+ },
+ "66": {
+  "objective": "2.3",
+  "difficulty": "easy",
+  "explanation": "SQL injection targets the database layer, exploiting weaknesses such as unsanitized queries and poorly configured database permissions. Buffer overflow and memory injection target application memory, not the database."
+ },
+ "67": {
+  "objective": "2.5",
+  "difficulty": "easy",
+  "explanation": "Segmentation places customer data on a separate network segment that corporate users cannot reach. Isolation implies completely cutting a system off, which is more than storing data on a separate, restricted part of the network."
+ },
+ "68": {
+  "objective": "4.3",
+  "difficulty": "easy",
+  "explanation": "CVSS assigns a numeric 0-10 score to quantify a vulnerability's severity. CVE is an identifier for a vulnerability and does not rate its criticality."
+ },
+ "69": {
+  "objective": "1.2",
+  "difficulty": "easy",
+  "explanation": "HR files contain sensitive personal data, so least privilege mainly protects confidentiality by limiting who can read them. Integrity concerns unauthorized modification, which is secondary here."
+ },
+ "70": {
+  "objective": "3.2",
+  "difficulty": "medium",
+  "explanation": "Safety controls such as emergency exit doors should fail open so people are not trapped when a system fails, protecting human life. Logical security controls failing closed protects data but does not address life safety."
+ },
+ "71": {
+  "objective": "2.2",
+  "difficulty": "easy",
+  "explanation": "Air-gapped networks have no network connection, so removable media such as USB drives are the most common path for data to leave. Bluetooth is typically disabled or absent in air-gapped environments."
+ },
+ "72": {
+  "objective": "2.5",
+  "difficulty": "easy",
+  "explanation": "An application allow list blocks any program that is not explicitly approved, stopping inadvertent malware installation. Least privilege limits damage but users may still run unapproved executables in their own context."
+ },
+ "73": {
+  "objective": "3.2",
+  "difficulty": "hard",
+  "explanation": "SASE delivers cloud-based secure access and web security close to remote users, offloading internet traffic from the VPN and circuit while still monitoring it and providing encrypted access to the data center. A load-balanced VPN adds capacity but does not reduce traffic on the circuit."
+ },
+ "74": {
+  "objective": "2.4",
+  "difficulty": "hard",
+  "explanation": "Heavy inbound traffic with few queries sent by the server indicates responses from reflectors (e.g., amplified DNS replies) flooding its interface, a reflected denial of service. On-path attacks intercept traffic rather than flooding a target."
+ },
+ "75": {
+  "objective": "4.6",
+  "difficulty": "medium",
+  "explanation": "RBAC grants access based on job roles and simplifies administration by assigning permissions to roles rather than individuals. ACLs are set per resource and user, which is less simplified to manage."
+ },
+ "76": {
+  "objective": "2.3",
+  "difficulty": "easy",
+  "explanation": "The BIOS is firmware, so a BIOS update addresses a firmware vulnerability. Operating system patches apply to the OS loaded after the firmware initializes the hardware."
+ },
+ "77": {
+  "objective": "4.9",
+  "difficulty": "easy",
+  "explanation": "File metadata records attributes such as the creation date and author. A SHA-256 hash only identifies the file's contents and reveals nothing about who created it or when."
+ },
+ "78": {
+  "objective": "4.1",
+  "difficulty": "medium",
+  "explanation": "Web-based administration is an unnecessary, commonly targeted management interface that should be disabled when hardening routers. Routing protocols and VLANs are required for the network to function, and console access is local and needed for management."
+ },
+ "79": {
+  "objective": "3.1",
+  "difficulty": "easy",
+  "explanation": "Infrastructure as code defines cloud resources in templates so they can be deployed easily and consistently. SDN abstracts network control but does not by itself automate deployment of all cloud resources."
+ },
+ "80": {
+  "objective": "2.4",
+  "difficulty": "medium",
+  "explanation": "Repeated failed login attempts against an account captured in a server's security log indicate a brute-force attack. A forgotten password produces only a few failures rather than a rapid series of attempts.",
+  "flags": [
+   "Missing exhibit: the stem says the administrator 'discovers the following;' but the source omits the log; answer kept as keyed (brute force is the standard answer for this item)."
+  ]
+ },
+ "81": {
+  "objective": "2.1",
+  "difficulty": "medium",
+  "explanation": "Organized crime groups are well funded, capable and financially motivated, so they can be hired by a foreign government to attack critical systems. Hacktivists act for ideological causes rather than as paid contractors."
+ },
+ "82": {
+  "objective": "1.4",
+  "difficulty": "easy",
+  "explanation": "A salt is random data added to input before hashing so identical inputs produce different hashes and precomputed tables fail. Key stretching repeatedly applies the hash rather than adding data beforehand."
+ },
+ "83": {
+  "objective": "2.2",
+  "difficulty": "medium",
+  "explanation": "A deceptive email linking to a fake site to harvest login credentials is phishing. Brand impersonation describes one technique within the email, but the overall attack is phishing."
+ },
+ "84": {
+  "objective": "4.5",
+  "difficulty": "medium",
+  "explanation": "The rule set must first permit port 53 from 10.50.10.25 to any destination, then deny port 53 from all other sources, since ACLs are processed top-down. The other options either permit everyone first or reverse source and destination.",
+  "flags": [
+   "Source text error: option D's deny rule reads '0.0.0.0.0.0.0.0.0/0' (intended 0.0.0.0/0); text kept as given, answer unaffected."
+  ]
+ },
+ "85": {
+  "objective": "4.6",
+  "difficulty": "easy",
+  "explanation": "SSO (e.g., via federation with the domain) lets employees use their existing domain credentials for SaaS applications, reducing credentials to maintain. MFA adds authentication factors but does not reduce the number of credentials."
+ },
+ "86": {
+  "objective": "3.2",
+  "difficulty": "easy",
+  "explanation": "A jump server is a hardened intermediary host that administrators connect to before reaching a protected segment. RADIUS provides centralized authentication but does not provide a path into the segment."
+ },
+ "87": {
+  "objective": "4.5",
+  "difficulty": "medium",
+  "explanation": "A WAF inspects HTTP traffic to a web application and can block malicious payloads such as buffer overflow attempts against the website. An NGFW works at the network level and is less focused on web application attacks."
+ },
+ "88": {
+  "objective": "4.6",
+  "difficulty": "medium",
+  "explanation": "Logins from unknown IPs indicate stolen credentials, and MFA prevents a password alone from granting access. Password complexity does not help once a password has already been compromised."
+ },
+ "89": {
+  "objective": "5.5",
+  "difficulty": "easy",
+  "explanation": "Giving the tester some basic information about the target is a partially known environment (gray box) test. A known environment test provides full details such as documentation and source code."
+ },
+ "90": {
+  "objective": "3.3",
+  "difficulty": "easy",
+  "explanation": "A site-to-site VPN encrypts traffic moving between locations, protecting data in transit. Data in use refers to data being processed in memory, which a VPN does not protect."
+ },
+ "91": {
+  "objective": "2.1",
+  "difficulty": "easy",
+  "explanation": "A department deploying its own software without IT approval is shadow IT. An insider threat implies malicious or harmful intent, which is not described."
+ },
+ "92": {
+  "objective": "1.4",
+  "difficulty": "easy",
+  "explanation": "A valid code signature proves the software was published by the vendor and has not been modified. A self-generated hash shows integrity only against a known value, not who produced the software."
+ },
+ "93": {
+  "objective": "2.2",
+  "difficulty": "medium",
+  "explanation": "NAC checks devices before granting them access to the network, primarily protecting the wired network attack surface such as open switch ports. Bluetooth and NFC are short-range wireless surfaces that NAC does not typically address."
+ },
+ "94": {
+  "objective": "1.1",
+  "difficulty": "medium",
+  "explanation": "Disabling services and adding a firewall offsets risks of a legacy system that cannot be fixed directly, which are compensating controls. Segmentation would mean placing the system on a separate network, which is not described."
+ },
+ "95": {
+  "objective": "5.3",
+  "difficulty": "medium",
+  "explanation": "A thorough supply chain analysis verifies the sources and vendors of hardware, reducing the risk of counterfeit components. A right-to-audit clause permits audits but does not by itself address counterfeit procurement."
+ },
+ "96": {
+  "objective": "5.3",
+  "difficulty": "easy",
+  "explanation": "Rules of engagement define the scope, timing, methods and limits of a penetration test with a third party. A right-to-audit clause grants audit rights rather than defining test terms."
+ },
+ "97": {
+  "objective": "5.5",
+  "difficulty": "easy",
+  "explanation": "Port and service scans interact directly with the target, which is active reconnaissance. Passive reconnaissance gathers information without touching the target, such as OSINT."
+ },
+ "98": {
+  "objective": "2.3",
+  "difficulty": "easy",
+  "explanation": "Side loading installs apps from outside the official store or approved repository. Jailbreaking modifies the OS to remove restrictions, which may enable side loading but is a different action."
+ },
+ "99": {
+  "objective": "2.4",
+  "difficulty": "medium",
+  "explanation": "A changed hash on a core system binary with no recent patches indicates the file was replaced or modified, consistent with a rootkit. Changing file permissions does not alter a file's contents or hash."
+ },
+ "100": {
+  "objective": "3.2",
+  "difficulty": "medium",
+  "explanation": "A jump server adds a controlled, hardened layer that users must pass through before reaching internal resources. A proxy server mainly mediates outbound web traffic rather than controlling access to internal systems."
+ }
 }

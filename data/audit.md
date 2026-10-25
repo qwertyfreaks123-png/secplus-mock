@@ -51,10 +51,12 @@ Below the threshold but >= 0.8 (checked by hand):
 
 ## 3. Problems found
 
-7 problem(s).
+9 problem(s).
 
 | Id | Problem | Planned handling |
 |---|---|---|
+| Q080 | stem refers to an exhibit that is not in the source ('...s security logs and discovers the following; Which...') | Keep text; answer still determinable from options and convention, so keep and flag missing exhibit |
+| Q084 | option D contains a malformed address '0.0.0.0.0.0.0.0.0/0' | Keep text (intended 0.0.0.0/0 is clear); flag |
 | Q264 | 7 options (A-G); source line 'F. Technical G. Deterrent' merged two options | Parser splits the merged line; keep all options, flag |
 | Q330 | stem asks for 2 answer(s) but key gives 1 (A) | Keep source answer; put full answer set in suggested_answer and flag |
 | Q345 | near-duplicate of Q344 (similarity 0.84) with a different key | Flag Q345 duplicate_of: Q344; flag Q344 suggested answer B |

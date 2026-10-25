@@ -100,6 +100,14 @@ for q in raw:
         problems.append((i, f"stem too short ({len(stem)} chars)", "Report"))
     elif not re.search(r"[?.:)\"'”]$", stem.strip()):
         problems.append((i, f"stem may be truncated (ends with {stem.strip()[-20:]!r})", "Review"))
+    m = re.search(r"(the following|as follows|below)\s*[:;,.]?\s*(Which|What|Based)\b", stem, re.I)
+    if m:
+        problems.append((i, f"stem refers to an exhibit that is not in the source ('...{stem[max(0, m.start() - 30):m.end()]}...')",
+                         "Keep text; answer still determinable from options and convention, so keep and flag missing exhibit"))
+    for k, v in opts.items():
+        for ip in re.findall(r"\b\d{1,3}(?:\.\d{1,3}){4,}(?:/\d+)?", v):
+            problems.append((i, f"option {k} contains a malformed address {ip!r}",
+                             "Keep text (intended 0.0.0.0/0 is clear); flag"))
     if len(opts) > 6:
         problems.append((i, f"{len(opts)} options (A-{letters[-1]}); source line 'F. Technical G. Deterrent' "
                             "merged two options" if "G" in opts else f"{len(opts)} options",

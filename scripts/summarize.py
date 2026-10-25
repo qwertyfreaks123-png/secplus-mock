@@ -1,5 +1,5 @@
 """Write data/summary.md from data/secplus-questions.json."""
-import json
+import json, re
 from collections import Counter
 
 recs = json.load(open("data/secplus-questions.json", encoding="utf-8"))
@@ -42,6 +42,9 @@ L += ["", "## Objectives", "", "| Objective | Questions |", "|---|---|"]
 L += [f"| {o} | {obj[o]} |" for o in sorted(obj, key=lambda o: tuple(map(int, o.split("."))))]
 L += ["", "## Difficulty", "", "| Difficulty | Questions | Share |", "|---|---|---|"]
 L += [f"| {k} | {diff[k]} | {100 * diff[k] / n:.1f}% |" for k in ("easy", "medium", "hard")]
+wording = sum(bool(re.search(r"\b(best|most|first)\b", r["question"], re.I)) for r in recs)
+L += ["", f"{wording} of {n} stems use best/most/first wording, so that wording alone was not treated as hard; "
+      "hard is reserved for long scenarios and close distractors."]
 L += ["", "## Full mock papers", "",
       "The bank has no PBQs, so each paper is 85 multiple-choice questions in 80 minutes, with domain quotas "
       "10 / 19 / 15 / 24 / 17. Papers never repeat a question.", "",
