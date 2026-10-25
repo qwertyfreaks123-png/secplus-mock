@@ -1,0 +1,8 @@
+# Source material and tooling: never deployed (SPEC section 11)
+questions/
+tools/
+scripts/
+data/raw.json
+data/tags/
+data/review_answers.json
+docs/
