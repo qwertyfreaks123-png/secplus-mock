@@ -36,3 +36,15 @@ Choices not covered by docs/SPEC.md. Append only.
 - Questions in the paper whose id is missing from the bank or whose type is unknown are skipped in the exam ("Question n of N" counts only shown ones); `currentIndex` indexes that filtered list (identical to `paper.questionIds` in practice).
 - Flagged ids are saved in exam order. Submit failures (e.g. scoreAttempt throws) show an in-page error and keep the attempt saved; the double-submit guard is a `submitted` flag.
 - Extra CSS variables beyond the shared list (exam only): `--topbar-bg`, `--topbar-text`, `--topbar-muted`, `--focus`. base.css also adds `.visually-hidden` and a global `[hidden] { display: none !important; }`.
+
+## Report screens
+
+- All report classes are prefixed `rp-` (report.css) to avoid clashing with base/exam CSS; `.container`, `.card`, `.banner`, `.btn*` from base.css are reused.
+- Custom test: count is clamped to 5..min(85, usable questions in the checked domains) on change; if fewer than 5 are usable the minimum drops to that number. Start is disabled with an inline message when no domain is checked or none are usable. Paper title is "Custom test (N questions)".
+- Home "Excluded: N" lists the ids inline in small text and in a `title` tooltip.
+- Resume card shows title, current question, answered count and minutes left (or "untimed"), plus a Discard button (confirm) that calls `clearInProgress()`.
+- History "Questions" column uses `perQuestion.length` (falls back to `totalMarks`). Rows are focusable (`tabindex=0`, role=link) and open on click, Enter or Space.
+- Settings take effect immediately via `Object.assign(ctx.settings, …)` + `saveSettings`. `useSuggested` is read at scoring time, so it also affects an exam already in progress; `shuffleOptions` affects new papers only.
+- Results page: shows a 100–900 scale bar with the 750 mark, domain labels as "N.0 Name", and counts on the Review buttons. Retry incorrect uses the lead's retry paper; if the engine returns an empty paper (all incorrect ids excluded/missing) an alert is shown.
+- Review: correct/accepted options get a green solid border + "✓ Correct answer"/"✓ Accepted" tag; a wrong pick gets a red dashed border + "✗" + "Your answer" tag. Unanswered questions are badged "Unanswered (incorrect)". The "Answer key note" box appears when the bank question has flags or the result entry is `ambiguous`; for ambiguous entries every letter in `acceptedAnswers` is marked accepted. Question number = 1-based position in `perQuestion` (exam order).
+- Unknown result id on results/review renders "Result not found" with a link home (shared `notFound` helper exported from results.js).
