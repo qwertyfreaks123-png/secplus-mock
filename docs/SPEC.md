@@ -210,3 +210,44 @@ Review (`#/review/<id>?filter=…`):
 - The app loads, runs a full 85-question exam end to end, survives a page reload mid-exam, auto-submits at 0:00 (test with a 1-minute custom exam), and shows correct results and review.
 - No errors in the browser console.
 - `docs/DECISIONS.md` lists any choice not covered by this spec.
+
+## 10. Amendments
+
+These override earlier sections where they differ.
+
+### 10.1 Excluded questions
+The paper generator must never use a question whose `flags` include an entry starting with `"duplicate_of"` or containing `"Missing exhibit"` (currently Q345 and Q080). This applies to every mode, including `retry` (excluded ids are silently dropped). Show the excluded count on the home screen's bank stats.
+
+### 10.2 Ambiguous questions
+If a question's `flags` contain an entry including `"treat as ambiguous"` (case-insensitive), accept EITHER the source `answer` or the `suggested_answer` as correct, regardless of the `useSuggested` setting. The review screen says "Either answer accepted (answer key disputed)" for these questions.
+
+### 10.3 Data fallback
+The real data file now exists, so the sample fallback in section 2 is only a safety net.
+
+### 10.4 Hosting
+Hosting is Vercel (section 11), not just local.
+
+### 10.5 Engine additions (exact exports, needed by 10.1 and 10.2)
+Added to `js/engine/paper.js`:
+- `isExcluded(q)` → boolean, per 10.1.
+- `excludedIds(bank)` → sorted array of excluded question ids (e.g. `["Q080", "Q345"]`).
+- `availableCounts(bank)` counts only usable questions (known type and not excluded), per domain.
+
+Added to `js/engine/score.js`:
+- `isAmbiguous(q)` → boolean, per 10.2.
+- `acceptedAnswers(q, settings)` → array of letter arrays. Normally `[correctAnswer(q, settings)]`; for an ambiguous question with a `suggested_answer`, `[q.answer, q.suggested_answer]` (source first).
+- `scoreAttempt` marks a question correct when the response equals ANY accepted answer.
+
+Each `Result.perQuestion` entry gains two fields (existing fields unchanged):
+`{ id, response, correctAnswer, isCorrect, usedSuggested, ambiguous: boolean, acceptedAnswers: [[...], ...] }`
+- `correctAnswer` stays `correctAnswer(q, settings)`; `usedSuggested` stays "the suggested answer was the one used as `correctAnswer`".
+- On the exam screen, the number of selections allowed for a multi question is `correctAnswer(q, ctx.settings).length`.
+
+## 11. Hosting and security
+
+The site is deployed on Vercel from `main` at https://secplus-mock.vercel.app and must NOT be publicly readable.
+
+- `middleware.js` at the repo root is Vercel Routing Middleware (runtime `nodejs`, no framework). It requires HTTP Basic Auth on EVERY path, including `/data/*`. The password is compared against the environment variable `SITE_PASSWORD` (any username accepted) using a constant-time comparison. If `SITE_PASSWORD` is not set, it fails closed with 503 and the message "Set SITE_PASSWORD in Vercel to unlock this site."
+- `.vercelignore` keeps source material out of the deployment: `questions/`, `tools/`, `scripts/`, `data/raw.json`, `data/tags/`, `data/review_answers.json`, `docs/`.
+- `/` redirects to `/app/`.
+- `SITE_PASSWORD` is set on the Vercel project for Production and Preview.
