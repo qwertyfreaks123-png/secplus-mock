@@ -210,7 +210,7 @@ export function mount(root, ctx) {
         onclick: () => choose(letter),
       },
       h('span', { class: 'option-mark', 'aria-hidden': 'true' }),
-      h('span', { class: 'option-letter' }, `${LETTERS[pos]}.`),
+      h('span', { class: 'option-letter' }, `${letter}.`),
       h('span', { class: 'option-text' }, String(q.options[letter] ?? '')));
       optionButtons.push(btn);
       group.append(btn);
@@ -431,9 +431,10 @@ export function mount(root, ctx) {
     if (e.repeat || key.length !== 1) return;
     const up = key.toUpperCase();
     if (up === 'F') { e.preventDefault(); toggleFlag(); return; }
-    let pos = LETTERS.indexOf(up);
-    if (pos < 0 && key >= '1' && key <= '7') pos = Number(key) - 1;
-    if (pos >= 0) { e.preventDefault(); chooseByPosition(pos); }
+    // Letters keep their original option letter (SPEC 6), even when shuffled;
+    // 1–7 pick by displayed position.
+    if (LETTERS.includes(up)) { e.preventDefault(); choose(up); return; }
+    if (key >= '1' && key <= '7') { e.preventDefault(); chooseByPosition(Number(key) - 1); }
   }
 
   function onHide() {

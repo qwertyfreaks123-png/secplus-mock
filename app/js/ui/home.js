@@ -171,10 +171,12 @@ export function mount(root, ctx, params) {
     countInput.max = String(Math.max(max, 1));
     countInput.min = String(Math.min(MIN_COUNT, Math.max(max, 1)));
     const n = currentCount();
-    countHint.textContent = `${Math.min(MIN_COUNT, Math.max(max, 1))}–${max} available for the selected domains`;
-    minutesOut.textContent = timedRadio.checked
-      ? `${minutesFor(Math.max(n, 0))} minutes`
-      : 'No time limit';
+    countHint.textContent = max < 1
+      ? 'No questions available for the selected domains'
+      : `${Math.min(MIN_COUNT, max)}–${max} available for the selected domains`;
+    minutesOut.textContent = !timedRadio.checked ? 'No time limit'
+      : max < 1 ? '—'
+      : `${minutesFor(Math.max(n, 0))} minutes`;
     let msg = '';
     if (doms.length === 0) msg = 'Select at least one domain.';
     else if (max < 1) msg = 'No usable questions in the selected domains.';

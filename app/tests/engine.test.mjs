@@ -464,7 +464,7 @@ after(() => {
 
 describe("storage with a working localStorage", () => {
   let fake;
-  beforeEach(() => { fake = new FakeStorage(); setLS(fake); });
+  beforeEach(() => { fake = new FakeStorage(); setLS(fake); storage.resetMemoryStore(); });
 
   test("settings defaults and merge", () => {
     assert.deepEqual(storage.loadSettings(), { useSuggested: true, shuffleOptions: false });
@@ -509,18 +509,26 @@ describe("storage with a working localStorage", () => {
 });
 
 describe("storage when localStorage throws or is absent", () => {
+  beforeEach(() => storage.resetMemoryStore());
+  // Nothing throws, and data survives for the current page in memory (SPEC 2:
+  // the app must still work without saving).
   const exercise = () => {
     assert.deepEqual(storage.loadSettings(), { useSuggested: true, shuffleOptions: false });
     assert.doesNotThrow(() => storage.saveSettings({ useSuggested: false }));
+    assert.deepEqual(storage.loadSettings(), { useSuggested: false, shuffleOptions: false });
     assert.equal(storage.loadInProgress(), null);
-    assert.doesNotThrow(() => storage.saveInProgress({ paper: {} }));
+    assert.doesNotThrow(() => storage.saveInProgress({ paper: { id: "p1" } }));
+    assert.deepEqual(storage.loadInProgress(), { paper: { id: "p1" } });
     assert.doesNotThrow(() => storage.clearInProgress());
+    assert.equal(storage.loadInProgress(), null);
     assert.deepEqual(storage.loadHistory(), []);
     assert.doesNotThrow(() => storage.addResult({ id: "r_1" }));
-    assert.equal(storage.getResult("r_1"), null);
+    assert.deepEqual(storage.getResult("r_1"), { id: "r_1" });
     assert.deepEqual(storage.loadStats(), { seen: {}, correct: {} });
     assert.doesNotThrow(() => storage.updateStats({ perQuestion: [{ id: "Q1", isCorrect: true }] }));
+    assert.deepEqual(storage.loadStats(), { seen: { Q1: 1 }, correct: { Q1: 1 } });
     assert.doesNotThrow(() => storage.resetStats());
+    assert.deepEqual(storage.loadStats(), { seen: {}, correct: {} });
   };
   test("methods throw", () => { setLS(throwing); exercise(); });
   test("accessor throws", () => {
@@ -528,6 +536,14 @@ describe("storage when localStorage throws or is absent", () => {
     exercise();
   });
   test("absent", () => { setLS(undefined); exercise(); });
+  test("quota error on write keeps the newest value in memory", () => {
+    const fake = new FakeStorage();
+    fake.setItem("secplus.v1.inProgress", JSON.stringify({ paper: { id: "old" } }));
+    fake.setItem = () => { throw new Error("QuotaExceededError"); };
+    setLS(fake);
+    storage.saveInProgress({ paper: { id: "new" } });
+    assert.deepEqual(storage.loadInProgress(), { paper: { id: "new" } });
+  });
 });
 
 // ---------- real data ----------

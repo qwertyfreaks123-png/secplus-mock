@@ -18,29 +18,56 @@ function store() {
   }
 }
 
-function read(key) {
+// In-memory copy of every write. Reads fall back to it when storage is
+// unavailable or the last write to that key failed (e.g. quota), so the app
+// keeps working for the current page without saving.
+const memory = new Map();
+const unsaved = new Set();
+
+function parse(raw) {
   try {
-    const s = store();
-    if (!s) return null;
-    const raw = s.getItem(key);
     return raw == null ? null : JSON.parse(raw);
   } catch {
     return null;
   }
 }
 
-function write(key, value) {
+function read(key) {
+  if (unsaved.has(key)) return parse(memory.get(key));
+  let raw;
   try {
     const s = store();
-    if (!s) return false;
-    s.setItem(key, JSON.stringify(value));
+    if (!s) throw new Error("no storage");
+    raw = s.getItem(key);
+  } catch {
+    return parse(memory.get(key));
+  }
+  return parse(raw);
+}
+
+function write(key, value) {
+  let raw;
+  try {
+    raw = JSON.stringify(value);
+  } catch {
+    return false;
+  }
+  memory.set(key, raw);
+  try {
+    const s = store();
+    if (!s) throw new Error("no storage");
+    s.setItem(key, raw);
+    unsaved.delete(key);
     return true;
   } catch {
+    unsaved.add(key);
     return false;
   }
 }
 
 function remove(key) {
+  memory.delete(key);
+  unsaved.delete(key);
   try {
     const s = store();
     if (s) s.removeItem(key);
@@ -108,4 +135,10 @@ export function updateStats(result) {
 
 export function resetStats() {
   remove(KEYS.stats);
+}
+
+// Clears the in-memory fallback (used by tests).
+export function resetMemoryStore() {
+  memory.clear();
+  unsaved.clear();
 }

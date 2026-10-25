@@ -48,3 +48,10 @@ Choices not covered by docs/SPEC.md. Append only.
 - Results page: shows a 100–900 scale bar with the 750 mark, domain labels as "N.0 Name", and counts on the Review buttons. Retry incorrect uses the lead's retry paper; if the engine returns an empty paper (all incorrect ids excluded/missing) an alert is shown.
 - Review: correct/accepted options get a green solid border + "✓ Correct answer"/"✓ Accepted" tag; a wrong pick gets a red dashed border + "✗" + "Your answer" tag. Unanswered questions are badged "Unanswered (incorrect)". The "Answer key note" box appears when the bank question has flags or the result entry is `ambiguous`; for ambiguous entries every letter in `acceptedAnswers` is marked accepted. Question number = 1-based position in `perQuestion` (exam order).
 - Unknown result id on results/review renders "Result not found" with a link home (shared `notFound` helper exported from results.js).
+- QA follow-ups (lead):
+  - Storage: every write is mirrored in memory; reads fall back to it when localStorage is unavailable or a write to that key failed (quota). Exams, results and review then work for the current page without saving (SPEC 2). `resetMemoryStore()` is exported for tests.
+  - Shuffled options keep their original letters (SPEC 6: "letters stay attached to their text"), overriding the Exam shell choice of display-position labels. A–G pick the option with that letter; 1–7 pick by displayed position; F still always flags.
+  - Added `--flag-contrast` and darkened light-mode `--flag` to #a35200 so flagged text/buttons reach 4.5:1 in both themes.
+  - The `data/batches/batch01.json` fallback named in SPEC 2 does not exist; per 10.3 it stays a safety net only, and the app shows a clear error if both loads fail.
+  - Multi questions whose source key has one letter but whose stem says "Select two" (Q330, Q347, Q350, Q359, Q391) allow one selection when "Use corrected answers" is off, per 10.5.
+  - `.vercelignore` also excludes `data/*.md`, `app/tests/` and README.md; vercel.json adds CSP (`'self'` only, inline styles allowed), X-Frame-Options DENY, nosniff, no-referrer and noindex.

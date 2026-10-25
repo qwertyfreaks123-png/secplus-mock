@@ -66,8 +66,8 @@
 }
 .flag-toggle:hover { background: rgba(255, 255, 255, 0.1); }
 .flag-toggle .flag-icon { color: var(--topbar-muted); }
-.flag-toggle.is-on { background: var(--flag); border-color: var(--flag); color: #fff; }
-.flag-toggle.is-on .flag-icon { color: #fff; }
+.flag-toggle.is-on { background: var(--flag); border-color: var(--flag); color: var(--flag-contrast); }
+.flag-toggle.is-on .flag-icon { color: var(--flag-contrast); }
 .flag-toggle:focus-visible { outline-color: #fff; }
 
 /* ---- main ---- */

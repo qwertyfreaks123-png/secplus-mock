@@ -16,7 +16,8 @@
   --bad-bg: #fbe9e7;
   --warn: #7d5200;
   --warn-bg: #fff3d1;
-  --flag: #b45f00;
+  --flag: #a35200;
+  --flag-contrast: #fff;
   --radius: 6px;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
@@ -47,6 +48,7 @@
     --warn: #f2c25c;
     --warn-bg: #352a10;
     --flag: #ffaa4d;
+    --flag-contrast: #1a1a1a;
     --topbar-bg: #0b0f14;
     --topbar-text: #f1f4f7;
     --topbar-muted: #a3aeba;
