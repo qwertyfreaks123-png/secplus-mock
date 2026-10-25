@@ -20,3 +20,19 @@ Choices not covered by docs/SPEC.md. Append only.
 ## Lead (integration)
 
 - Node 22 treats `node --test app/tests/` as a module path, not a directory. `app/tests/package.json` (`"main": "engine.test.mjs"`) makes the documented command run the suite; `node --test` from the repo root also works.
+
+## Exam shell
+
+- Sample-data banner: main.js does not render a global banner; only home shows it (when `ctx.isSample`), so it never appears twice. The exam screen shows none.
+- Router: `#/home` and `#/exam` → `{}`; `#/results/<id>` → `{ id }`; `#/review/<id>?filter=` → `{ id, filter }` (all|incorrect|flagged, else "all"). Path segments are URI-decoded. Empty, unknown or malformed hashes are replaced (history.replaceState, no extra history entry) with `#/home`. `ctx.navigate(hash)` sets `location.hash`; navigating to the current hash re-renders. A screen's returned cleanup runs before the next mount; the page scrolls to top on every route change. A screen whose mount throws shows a readable error in #app.
+- bankById is a plain object (`bankById[id]`), keyed by every record in the bank (unknown types included).
+- If both data files fail to load, #app shows the two fetch errors plus how to serve the app.
+- Option labels shown in the exam are the DISPLAYED position letters (A, B, C… top to bottom), and keyboard A–G (and 1–7) pick by displayed position. Responses store the original option letters, so shuffling never changes scoring/review.
+- Key conflict: F is both "flag" and the 6th option (14 questions have 6–7 options). F always toggles the flag; the 6th/7th options can be picked with keys 6/7 (or 1–7 for any option) or by click. Keys are ignored when Ctrl/Alt/Meta/Shift is held, when focus is in a text field, while the End Exam dialog is open, and on the in-exam review screen (where Escape returns to the question).
+- Options are `<button role="radio|checkbox">` rather than native inputs so ←/→ never change a native radio selection.
+- Single choice cannot be deselected (as on Pearson VUE); multi choice allows at most `correctAnswer(q, ctx.settings).length` selections — further options are greyed (aria-disabled) until one is unticked. A multi with fewer than the required selections counts as "Incomplete"/unanswered in the review grid and the End Exam dialog.
+- "Next" on the last question opens the in-exam Review screen. The current view (question vs review) is not persisted; reload returns to the question at `currentIndex`.
+- Timer: wall-clock deltas every 250 ms; `remainingSec` is stored rounded up and `elapsedSec` rounded down. Saved on every change, every 5 s, on tab hide and on pagehide. Time while the page is closed is not counted (reload resumes with the saved remaining time). A resumed attempt with 0 s left submits immediately.
+- Questions in the paper whose id is missing from the bank or whose type is unknown are skipped in the exam ("Question n of N" counts only shown ones); `currentIndex` indexes that filtered list (identical to `paper.questionIds` in practice).
+- Flagged ids are saved in exam order. Submit failures (e.g. scoreAttempt throws) show an in-page error and keep the attempt saved; the double-submit guard is a `submitted` flag.
+- Extra CSS variables beyond the shared list (exam only): `--topbar-bg`, `--topbar-text`, `--topbar-muted`, `--focus`. base.css also adds `.visually-hidden` and a global `[hidden] { display: none !important; }`.
