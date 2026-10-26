@@ -251,3 +251,8 @@ The site is deployed on Vercel from `main` at https://secplus-mock.vercel.app an
 - `.vercelignore` keeps source material out of the deployment: `questions/`, `tools/`, `scripts/`, `data/raw.json`, `data/tags/`, `data/review_answers.json`, `docs/`.
 - `/` redirects to `/app/`.
 - `SITE_PASSWORD` is set on the Vercel project for Production and Preview.
+
+### 10.6 Real exam timing (overrides sections 6, 8 and 9)
+The real SY0-701 exam is a maximum of 90 questions in 90 minutes (pass 750 on 100–900; domain weights 12/22/18/28/20 as in section 6). Because this bank has no PBQs, the full mock uses the maximum:
+- `mode "full"`: 90 questions, `durationSec` 5400 (90 min). `quotas(90)` = `{1:11, 2:20, 3:16, 4:25, 5:18}`. `quotas(85)` must still give `{1:10, 2:19, 3:15, 4:24, 5:17}`.
+- Custom test: 5–90 questions; timed minutes = count (the real exam pace of one minute per question). Retry incorrect uses the same pace.

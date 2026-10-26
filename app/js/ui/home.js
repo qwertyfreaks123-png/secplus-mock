@@ -1,7 +1,7 @@
 // Home screen (#/home) — Session C. See docs/SPEC.md sections 8, 10.1.
 
-const FULL_COUNT = 85;
-const FULL_SEC = 4800;
+const FULL_COUNT = 90;
+const FULL_SEC = 5400;
 const MIN_COUNT = 5;
 
 function el(tag, attrs, ...children) {
@@ -23,7 +23,8 @@ function el(tag, attrs, ...children) {
 }
 
 function minutesFor(count) {
-  return Math.round((count * 80) / 85);
+  // Real exam pace: 90 minutes for up to 90 questions.
+  return Math.round((count * FULL_SEC) / 60 / FULL_COUNT);
 }
 
 function fmtDate(iso) {

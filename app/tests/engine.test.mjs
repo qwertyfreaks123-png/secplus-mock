@@ -14,7 +14,7 @@ import * as storage from "../js/engine/storage.js";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DOMAIN_SIZES = { 1: 64, 2: 86, 3: 72, 4: 136, 5: 59 };
-const FULL_QUOTAS = { 1: 10, 2: 19, 3: 15, 4: 24, 5: 17 };
+const FULL_QUOTAS = { 1: 11, 2: 20, 3: 16, 4: 25, 5: 18 }; // quotas(90)
 const AMBIG_FLAG = "Independent reviewer accepted the source answer; treat as ambiguous.";
 
 // ---------- synthetic bank ----------
@@ -71,6 +71,10 @@ const sum = (o) => Object.values(o).reduce((a, b) => a + b, 0);
 describe("quotas", () => {
   test("85 across all domains is exact", () => {
     assert.deepEqual(quotas(85), { 1: 10, 2: 19, 3: 15, 4: 24, 5: 17 });
+  });
+
+  test("90 (full mock) across all domains is exact", () => {
+    assert.deepEqual(quotas(90), FULL_QUOTAS);
   });
   test("always sums to count for many counts and domain subsets", () => {
     const subsets = [[1, 2, 3, 4, 5], [1], [5], [1, 2], [2, 4], [1, 3, 5], [2, 3, 4, 5]];
@@ -149,13 +153,13 @@ describe("generatePaper", () => {
 
   test("synthetic bank has 417 questions", () => assert.equal(bank.length, 417));
 
-  test("full paper: 85 unique questions, exact quotas, fixed duration, defaults", () => {
+  test("full paper: 90 unique questions, exact quotas, fixed duration, defaults", () => {
     for (let i = 0; i < 10; i++) {
       const p = generatePaper(bank, { mode: "full", durationSec: 60 }, {}, { shuffleOptions: false });
-      assert.equal(p.questionIds.length, 85);
-      assert.equal(new Set(p.questionIds).size, 85);
+      assert.equal(p.questionIds.length, 90);
+      assert.equal(new Set(p.questionIds).size, 90);
       assert.deepEqual(countByDomain(p.questionIds, bank), FULL_QUOTAS);
-      assert.equal(p.durationSec, 4800);
+      assert.equal(p.durationSec, 5400);
       assert.equal(p.mode, "full");
       assert.equal(p.title, "Full mock exam");
       assert.equal(p.optionOrder, null);
@@ -187,17 +191,17 @@ describe("generatePaper", () => {
   test("short domain: takes all it has and fills the rest by weight", () => {
     const small = makeBank({ 1: 64, 2: 86, 3: 72, 4: 136, 5: 5 });
     const p = generatePaper(small, { mode: "full", seed: 1 });
-    assert.equal(p.questionIds.length, 85);
-    assert.equal(new Set(p.questionIds).size, 85);
-    // shortfall 12 split over 1-4 by weight: quotas(12,[1,2,3,4]) = {1:2,2:3,3:3,4:4}
-    assert.deepEqual(countByDomain(p.questionIds, small), { 1: 12, 2: 22, 3: 18, 4: 28, 5: 5 });
+    assert.equal(p.questionIds.length, 90);
+    assert.equal(new Set(p.questionIds).size, 90);
+    // quotas(90) = {1:11,2:20,3:16,4:25,5:18}; shortfall 13 split over 1-4 by weight: quotas(13,[1,2,3,4]) = {1:2,2:4,3:3,4:4}
+    assert.deepEqual(countByDomain(p.questionIds, small), { 1: 13, 2: 24, 3: 19, 4: 29, 5: 5 });
   });
 
   test("short domains cascade when the fill-in domain is also short", () => {
     const small = makeBank({ 1: 11, 2: 86, 3: 72, 4: 136, 5: 5 });
     const p = generatePaper(small, { mode: "full", seed: 2 });
-    assert.equal(p.questionIds.length, 85);
-    assert.equal(new Set(p.questionIds).size, 85);
+    assert.equal(p.questionIds.length, 90);
+    assert.equal(new Set(p.questionIds).size, 90);
     const c = countByDomain(p.questionIds, small);
     assert.equal(c[1], 11);
     assert.equal(c[5], 5);
@@ -244,7 +248,7 @@ describe("generatePaper", () => {
   test("shuffleOptions gives a permutation of the option letters per question", () => {
     const p = generatePaper(bank, { mode: "full" }, {}, { shuffleOptions: true });
     const byId = toById(bank);
-    assert.equal(Object.keys(p.optionOrder).length, 85);
+    assert.equal(Object.keys(p.optionOrder).length, 90);
     for (const id of p.questionIds) {
       const letters = Object.keys(byId[id].options).sort();
       assert.deepEqual([...p.optionOrder[id]].sort(), letters);
@@ -309,7 +313,7 @@ describe("excluded questions", () => {
         assert.ok(!p.questionIds.includes("Q010"));
         assert.ok(!p.questionIds.includes("Q020"));
       }
-      assert.equal(full.questionIds.length, 85);
+      assert.equal(full.questionIds.length, 90);
       assert.deepEqual(countByDomain(full.questionIds, bank), FULL_QUOTAS);
       assert.equal(custom.questionIds.length, 62);
       assert.deepEqual([...retry.questionIds].sort(), ["Q030", "Q100"]);
@@ -550,12 +554,12 @@ describe("storage when localStorage throws or is absent", () => {
 describe("real question bank", () => {
   const real = JSON.parse(readFileSync(join(HERE, "..", "..", "data", "secplus-questions.json"), "utf8"));
 
-  test("full paper from real data: 85 unique, exact quotas, no excluded questions", () => {
+  test("full paper from real data: 90 unique, exact quotas, no excluded questions", () => {
     assert.deepEqual(excludedIds(real), ["Q080", "Q345"]);
     for (let i = 0; i < 20; i++) {
       const p = generatePaper(real, { mode: "full" }, {}, { useSuggested: true, shuffleOptions: false });
-      assert.equal(p.questionIds.length, 85);
-      assert.equal(new Set(p.questionIds).size, 85);
+      assert.equal(p.questionIds.length, 90);
+      assert.equal(new Set(p.questionIds).size, 90);
       assert.deepEqual(countByDomain(p.questionIds, real), FULL_QUOTAS);
       assert.ok(!p.questionIds.includes("Q080"));
       assert.ok(!p.questionIds.includes("Q345"));
