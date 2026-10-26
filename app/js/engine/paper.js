@@ -12,8 +12,8 @@ export const DOMAIN_NAMES = {
 
 const ALL_DOMAINS = [1, 2, 3, 4, 5];
 const KNOWN_TYPES = new Set(["single", "multi"]);
-const FULL_COUNT = 85;
-const FULL_DURATION = 4800;
+const FULL_COUNT = 90;
+const FULL_DURATION = 5400;
 const DEFAULT_TITLES = { full: "Full mock exam", custom: "Custom test", retry: "Retry incorrect" };
 
 // Integer weights (percent) so quota arithmetic is exact.

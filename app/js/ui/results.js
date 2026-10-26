@@ -143,7 +143,7 @@ export function mount(root, ctx, params) {
     try {
       paper = E.generatePaper(ctx.bank, {
         mode: 'retry', questionIds: incorrectIds.slice(), title: 'Retry incorrect',
-        durationSec: Math.round((n * 80) / 85) * 60,
+        durationSec: n * 60, // real exam pace: 90 questions in 90 minutes
       }, E.loadStats(), ctx.settings);
     } catch (err) {
       alert('Could not create the retry exam: ' + (err && err.message ? err.message : err));

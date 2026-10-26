@@ -55,3 +55,4 @@ Choices not covered by docs/SPEC.md. Append only.
   - The `data/batches/batch01.json` fallback named in SPEC 2 does not exist; per 10.3 it stays a safety net only, and the app shows a clear error if both loads fail.
   - Multi questions whose source key has one letter but whose stem says "Select two" (Q330, Q347, Q350, Q359, Q391) allow one selection when "Use corrected answers" is off, per 10.5.
   - `.vercelignore` also excludes `data/*.md`, `app/tests/` and README.md; vercel.json adds CSP (`'self'` only, inline styles allowed), X-Frame-Options DENY, nosniff, no-referrer and noindex.
+- Real exam timing (SPEC 10.6): the full mock is now 90 questions in 90 minutes, matching CompTIA's published SY0-701 format (max 90 questions, 90 minutes). Using the maximum question count keeps the time pressure realistic, since the real exam's PBQs take longer than multiple-choice questions and this bank has none. Custom and retry tests get one minute per question.
